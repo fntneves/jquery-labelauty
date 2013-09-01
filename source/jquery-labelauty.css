@@ -127,8 +127,3 @@ input.labelauty:checked + label:hover
 	{
 		display: inline-block;
 	}
-
-	input.labelauty.no-label:checked + label > span.labelauty-checked
-	{
-		display: block;
-	}
