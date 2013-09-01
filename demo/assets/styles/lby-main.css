@@ -45,7 +45,7 @@ footer { text-align: center; padding-bottom: 25px; }
 footer h4 { margin-bottom: 0; margin-top: 0; line-height: 25px; font-family: "open_sans_lightregular"; font-weight: normal; font-size: 14px; }
 
 
-input.to-labelauty-icon + label { display: inline-block; margin-right: 10px; }
+input.to-labelauty-icon + label { display: inline-block; margin-right: 6px; }
 input.to-labelauty-icon + label:last-child { margin-right: 0; }
 
 input.labelauty + label { font-size: 11px; }
