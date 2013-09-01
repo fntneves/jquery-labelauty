@@ -8,7 +8,7 @@ radio buttons and allows custom labels for each status of (un)checked inputs.
 Installation
 ------------
 
-Include jQuery, [labelauty-jquery.js], [labelauty-jquery.css] and [images] folder to your project.
+Include jQuery, [jquery-labelauty.js], [jquery-labelauty.css] and [images] folder to your project.
 
 
 Fast Usage
@@ -162,7 +162,8 @@ Acknowledgements
 
 [francisconeves]: http://www.francisconeves.com
 [c]:   http://github.com/francisconeves/labelauty-jquery/contributors
-[labelauty-jquery.js]: http://r
-[labelauty-jquery.css]: http://r
+[labelauty-jquery.js]: https://github.com/francisconeves/labelauty-jquery/blob/master/source/jquery-labelauty.js
+[labelauty-jquery.css]: https://github.com/francisconeves/labelauty-jquery/blob/master/source/jquery-labelauty.css
+[images]: https://github.com/francisconeves/labelauty-jquery/tree/master/source/images
 [Options]: https://github.com/francisconeves/labelauty-jquery#options
 
