@@ -35,9 +35,9 @@ Simple, isn't it?
 Use Cases
 ----------
 
- * Very user-friendly!
+ * If you want to create user-friendly websites, this is the right choice!
 
- * Very useful in Remember Me checkboxes, in website Settins Panel, etc.
+ * Very useful in `remember me` checkboxes, in `settings panel`, etc.
 
 
 How does it work ?
