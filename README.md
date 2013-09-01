@@ -77,7 +77,7 @@ __Message__
 
 Without separator, the __Message__ text will be the permament label. It means that label will not change between input status.
 
-~~~ js
+~~~ html
 <input type="checkbox" data-labelauty="Synchronize my files"/>
 ~~~
 __________
