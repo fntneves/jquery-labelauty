@@ -33,7 +33,7 @@ Simple, isn't it?
 Use Cases
 ----------
 
- * Easy to user read what choice he's going to make, when submission occurs.
+ * Very user-friendly!
 
  * Very useful in Remember Me checkboxes, in website Settins Panel, etc.
 
