@@ -81,9 +81,9 @@ Without separator, the __Message__ text will be the permament label. It means th
 <input class="to-labelauty" type="checkbox" data-labelauty="Synchronize my files"/>
 ~~~
 __________
-__Ommited__
+__Omited__
 
-By ommiting this attribute, the default labels will be shown.
+By omiting this attribute, the default labels will be shown.
 
 ~~~ html
 <input class="to-labelauty" type="checkbox"/>
