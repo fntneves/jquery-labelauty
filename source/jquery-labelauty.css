@@ -87,20 +87,20 @@ input.labelauty + label > span.labelauty-checked-image
 		margin-left: 7px;
 	}
 
-input.labelauty + label:hover
+input.labelauty:not(:checked):not([disabled]) + label:hover
 {
 	background-color: #eaeaea;
 	color: #a7a7a7;
 }
-	input.labelauty:not(:checked) + label > span.labelauty-checked-image
-	{
-		display: none;
-	}
+input.labelauty:not(:checked) + label > span.labelauty-checked-image
+{
+	display: none;
+}
 
-	input.labelauty:not(:checked) + label > span.labelauty-checked
-	{
-		display: none;
-	}
+input.labelauty:not(:checked) + label > span.labelauty-checked
+{
+	display: none;
+}
 
 /* When Checked */
 input.labelauty:checked + label
@@ -109,21 +109,27 @@ input.labelauty:checked + label
 	color: #ffffff;
 }
 
-input.labelauty:checked + label:hover
+input.labelauty:checked:not([disabled]) + label:hover
 {
 	background-color: #41d681;
 }
-	input.labelauty:checked + label > span.labelauty-unchecked-image
-	{
-		display: none;
-	}
 
-	input.labelauty:checked + label > span.labelauty-unchecked
-	{
-		display: none;
-	}
+input.labelauty:checked + label > span.labelauty-unchecked-image
+{
+	display: none;
+}
 
-	input.labelauty:checked + label > span.labelauty-checked
-	{
-		display: inline-block;
-	}
+input.labelauty:checked + label > span.labelauty-unchecked
+{
+	display: none;
+}
+
+input.labelauty:checked + label > span.labelauty-checked
+{
+	display: inline-block;
+}
+
+input.labelauty[disabled] + label
+{
+	opacity: 0.5;
+}
