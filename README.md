@@ -164,5 +164,5 @@ Acknowledgements
 [c]:   http://github.com/francisconeves/labelauty-jquery/contributors
 [labelauty-jquery.js]: http://r
 [labelauty-jquery.css]: http://r
-[Options]: https://github.com/francisconeves/labelauty-jquery/edit/master/README.md#options
+[Options]: https://github.com/francisconeves/labelauty-jquery#options
 
