@@ -22,7 +22,7 @@
 			development: false,
 
 			// Trigger Class
-			// This class will be used to apply plugin
+			// This class will be used to apply styles
 			class: "labelauty",
 
 			// Use text label ?
@@ -34,18 +34,18 @@
 			separator: "|",
 
 			// Default Checked Message
-			// This message will be visible when checkbox is checked
+			// This message will be visible when input is checked
 			checked_label: "Checked",
 
 			// Default UnChecked Message
-			// This message will be visible when checkbox is unchecked
+			// This message will be visible when input is unchecked
 			unchecked_label: "Unchecked",
 
 			// Minimum Label Width
 			// This value will be used to apply a minimum width to the text labels
 			minimum_width: false,
 
-			// Use the greatest width and fix it ?
+			// Use the greatest width between two text labels ?
 			// If this has a true value, then label width will be the greatest between labels
 			same_width: true
 		}, options);
@@ -58,12 +58,11 @@
 		{
 			var $object = $( this );
 			var use_labels = true;
-			var single_label = false;
 			var labels;
 			var labels_object;
 			var input_id;
 
-			// Test if object is a checkbox
+			// Test if object is a check input
 			// Don't mess me up, come on
 			if( $object.is( ":checkbox" ) === false && $object.is( ":radio" ) === false )
 				return this;
@@ -80,22 +79,16 @@
 
 			// It's time to check if it's going to the right way
 			// Null values, more labels than expected or no labels will be handled here
-			if( labels == null || labels.length === 0 )
+			if( use_labels === true )
 			{
-				// If attribute has no label and we want to use, then use the default label
-				// Else, we don't use labels :(
-				if( use_labels === true )
+				if( labels == null || labels.length === 0 )
 				{
+					// If attribute has no label and we want to use, then use the default labels
 					labels_object = new Array();
 					labels_object[0] = settings.unchecked_label;
 					labels_object[1] = settings.checked_label;
 				}
 				else
-					$object.addClass( "no-label" );
-			}
-			else
-			{
-				if( use_labels === true )
 				{
 					// Ok, ok, it's time to split Checked and Unchecked labels
 					// We split, by the "settings.separator" option
@@ -114,10 +107,7 @@
 						// If there's just one label (no split by "settings.separator"), it will be used for both cases
 						// Here, we have the possibility of use the same label for both cases
 						if( labels_object.length === 1 )
-						{
-							single_label = true;
-							debug( settings.development, "There's just one label. LABELAUTY will be this one for both cases." );
-						}
+							debug( settings.development, "There's just one label. LABELAUTY will use this one for both cases." );
 					}
 				}
 			}
@@ -157,10 +147,7 @@
 
 			// Now, add necessary tags to make this work
 			// Here, we're going to test some control variables and act properly
-			if( use_labels )
-				$object.after( create( input_id, labels_object[0], labels_object[1], settings.label ) );
-			else
-				$object.after( create( input_id, null, null, settings.label ) );
+			$object.after( create( input_id, labels_object, use_labels ) );
 
 			// Now, add "min-width" to label
 			// Let's say the truth, a fixed width is more beautiful than a variable width
@@ -189,15 +176,24 @@
 			window.console.log( "jQuery-LABELAUTY: " + message );
 	};
 
-	function create( input_id, unchecked_message, checked_message, label )
+	function create( input_id, messages_object, label )
 	{
 		var block;
+		var unchecked_message;
+		var checked_message;
 
-		if( checked_message == null )
-			checked_message = unchecked_message;
-
-		if( unchecked_message == null && checked_message == null )
+		if( messages_object == null )
 			unchecked_message = checked_message = "";
+		else
+		{
+			unchecked_message = messages_object[0];
+
+			// If checked message is null, then put the same text of unchecked message
+			if( messages_object[1] == null )
+				checked_message = unchecked_message;
+			else
+				checked_message = messages_object[1];
+		}
 
 		if( label == true )
 		{
