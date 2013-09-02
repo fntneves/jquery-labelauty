@@ -12,8 +12,8 @@
 	$.fn.labelauty = function( options )
 	{
 		/*
-		 * There is our default settings
-		 * Hope you don't need to fill your code, with these settings
+		 * Our default settings
+		 * Hope you don't need to change anything, with these settings
 		 */
 		var settings = $.extend(
 		{
