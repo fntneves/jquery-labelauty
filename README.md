@@ -4,7 +4,7 @@ Labelauty jQuery Plugin
 A nice and lightweigth jQuery plugin that gives beauty to checkboxes and 
 radio buttons and allows custom labels for each status of (un)checked inputs.
 
-Demo: http://francisconeves.com/labelauty/
+Demo: http://labelauty.francisconeves.com/
 
 
 Installation
