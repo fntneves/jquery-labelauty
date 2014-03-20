@@ -44,7 +44,7 @@ How does it work ?
 --------------
 
 The above case will generate one checkbox with default 
-labels "Checked" and "Unchecked", one for each input status.
+labels "Checked" and "Unchecked", one for each input state.
 
 You can change the default labels (see [Options] section) or 
 give custom labels to each checkbox, like the following example:
@@ -59,8 +59,8 @@ $(document).ready(function(){
 });
 ~~~
 
-The __data-labelauty__ attribute of radio and checkbox inputs let you write custom label for the __unchecked|checked__ case.
-Pipe character __|__, is the default separator between these two labels. You can change this (see [Options] section).
+The __data-labelauty__ attribute of radio and checkbox inputs lets you write custom labels for __unchecked|checked__ cases.
+Pipe character __|__, is the default separator between these two labels. You can change it (see [Options] section).
 
 
 
@@ -69,7 +69,7 @@ The __data-labelauty__ attribute can be used in three different ways:
 __________
 __Unchecked|Checked__
 
-To choose a custom label for Unchecked and Checked status.
+To choose a custom label for Unchecked and Checked states.
 
 ~~~ html
 <input type="checkbox" data-labelauty="Don't synchronize files|Synchronize my files"/>
@@ -77,7 +77,7 @@ To choose a custom label for Unchecked and Checked status.
 __________
 __Message__
 
-Without separator, the __Message__ text will be the permament label. It means that label will not change between input status.
+Without separator, the __Message__ text will be the permament label. It means that label will not change between input state.
 
 ~~~ html
 <input type="checkbox" data-labelauty="Synchronize my files"/>
@@ -114,7 +114,7 @@ Choose your separator with `separator`.
 $(":checkbox").labelauty({ separator: "-" });
 ~~~
 
-Do you want another default labels?
+Do you want custom default labels?
 Set new text in `checked_label` and `unchecked_label`.
 
 ~~~ js
@@ -124,14 +124,14 @@ $(":checkbox").labelauty({
 });
 ~~~
 
-Actually, custom labels has different number of characters or width.
+Actually, custom labels have different number of characters or width.
 So, you can set `minimum-width` to custom CSS option.
 
 ~~~ js
 $(":checkbox").labelauty({ minimum_width: "170px" });
 ~~~
 
-If you dislike the previous option, then you can set labels with same width.
+If you dislike the previous option, then you can set labels with the same width.
 Just set `same_width` to `true`.
 
 ~~~ js
