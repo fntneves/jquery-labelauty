@@ -159,7 +159,7 @@ Acknowledgements
 [Contributors][c] can help to make this plugin better.
 
  * [My website](http://francisconeves.com) (francisconeves.com)
- * [Github](http://github.com/francisconeves) (@francisconeves)
+ * [Github](http://github.com/fntneves) (@fntneves)
  * [Twitter](http://twitter.com/fntneves) (@fntneves)
 
 [francisconeves]: http://www.francisconeves.com
