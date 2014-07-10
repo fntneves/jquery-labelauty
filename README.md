@@ -1,10 +1,10 @@
 Labelauty jQuery Plugin
 =========
 
-A nice and lightweigth jQuery plugin that gives beauty to checkboxes and 
+A nice and lightweigth jQuery plugin that gives beauty to checkboxes and
 radio buttons and allows custom labels for each status of (un)checked inputs.
 
-Demo: http://labelauty.francisconeves.com/
+Demo: http://fntneves.github.io/jquery-labelauty
 
 
 Installation
@@ -43,10 +43,10 @@ Use Cases
 How does it work ?
 --------------
 
-The above case will generate one checkbox with default 
+The above case will generate one checkbox with default
 labels "Checked" and "Unchecked", one for each input state.
 
-You can change the default labels (see [Options] section) or 
+You can change the default labels (see [Options] section) or
 give custom labels to each checkbox, like the following example:
 
 ~~~ html
@@ -163,9 +163,9 @@ Acknowledgements
  * [Twitter](http://twitter.com/fntneves) (@fntneves)
 
 [francisconeves]: http://www.francisconeves.com
-[c]:   http://github.com/francisconeves/labelauty-jquery/contributors
-[jquery-labelauty.js]: https://github.com/francisconeves/labelauty-jquery/blob/master/source/jquery-labelauty.js
-[jquery-labelauty.css]: https://github.com/francisconeves/labelauty-jquery/blob/master/source/jquery-labelauty.css
-[images]: https://github.com/francisconeves/labelauty-jquery/tree/master/source/images
-[Options]: https://github.com/francisconeves/labelauty-jquery#options
+[c]:   http://github.com/fntneves/labelauty-jquery/contributors
+[jquery-labelauty.js]: https://github.com/fntneves/labelauty-jquery/blob/master/source/jquery-labelauty.js
+[jquery-labelauty.css]: https://github.com/fntneves/labelauty-jquery/blob/master/source/jquery-labelauty.css
+[images]: https://github.com/fntneves/labelauty-jquery/tree/master/source/images
+[Options]: https://github.com/fntneves/labelauty-jquery#options
 
