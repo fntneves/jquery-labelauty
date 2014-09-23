@@ -1,0 +1,19 @@
+{
+  "name": "jquery-labelauty",
+  "version": "1.0.0",
+  "homepage": "https://github.com/fntneves/jquery-labelauty",
+  "authors": [
+    "Francisco Neves <contact@francisconeves.com>"
+  ],
+  "description": "A lightweight and beautiful jQuery plugin for radio and checkbox inputs.",
+  "main": "source/jquery-labelauty.js",
+  "keywords": [
+    "jquery",
+    "checkbox",
+    "radio",
+    "style",
+    "UI",
+    "UX"
+  ],
+  "license": "MIT"
+}
