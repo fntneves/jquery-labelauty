@@ -9,8 +9,9 @@ Demo: http://fntneves.github.io/jquery-labelauty
 
 Installation
 ------------
-
-Include jQuery, [jquery-labelauty.js], [jquery-labelauty.css] and [images] folder in your project.
+~~~~
+bower install labelauty
+~~~
 
 
 Fast Usage
