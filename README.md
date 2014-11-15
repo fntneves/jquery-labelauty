@@ -1,7 +1,7 @@
 Labelauty jQuery Plugin
 =========
 
-A nice and lightweigth jQuery plugin that gives beauty to checkboxes and
+A nice and lightweight jQuery plugin that gives beauty to checkboxes and
 radio buttons and allows custom labels for each status of (un)checked inputs.
 
 **Demo:** http://fntneves.github.io/jquery-labelauty
@@ -79,15 +79,15 @@ To choose a custom label for Unchecked and Checked states.
 __________
 __Message__
 
-Without separator, the __Message__ text will be the permament label. It means that label will not change between input state.
+Without separator, the __Message__ text will be the permanent label. It means that label will not change between input state.
 
 ~~~ html
 <input type="checkbox" data-labelauty="Synchronize my files"/>
 ~~~
-__________
-__Omited__
+___________
+__Omitted__
 
-By omiting this attribute, the default labels will be shown.
+By omitting this attribute, the default labels will be shown.
 
 ~~~ html
 <input type="checkbox"/>
