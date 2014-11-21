@@ -158,7 +158,7 @@ Acknowledgements
 © 2013, Francisco Neves. Released under the [MIT License](License.md).
 
 **Labelauty** is authored and maintained by [Francisco Neves][francisconeves].
-[Contributors][c] can help to make this plugin better.
+[Contributors][c] can help to make this plugin better. You can follow [Trello of this repo](https://trello.com/b/bXfzw5mz/jquery-labelauty). 
 
  * [My website](http://francisconeves.com) (francisconeves.com)
  * [Github](http://github.com/fntneves) (@fntneves)
