@@ -159,8 +159,8 @@
 			if( settings.same_width != false && settings.label == true )
 			{
 				var label_object = $object.next( "label[for=" + input_id + "]" );
-				var unchecked_width = label_object.find( "span.labelauty-unchecked" ).width();
-				var checked_width = label_object.find( "span.labelauty-checked" ).width();
+				var unchecked_width = getRealWidth(label_object.find( "span.labelauty-unchecked" ));
+				var checked_width = getRealWidth(label_object.find( "span.labelauty-checked" ));
 
 				if( unchecked_width > checked_width )
 					label_object.find( "span.labelauty-checked" ).width( unchecked_width );
@@ -169,6 +169,24 @@
 			}
 		});
 	};
+
+	/*
+	 * Tricky code to work with hidden elements, like tabs.
+	 * Note: This code is based on jquery.actual plugin.
+	 * https://github.com/dreamerslab/jquery.actual
+	 */
+	function getRealWidth( element )
+	{
+		var width = 0;
+		var $target = element;
+		var style = 'position: absolute !important; top: -1000 !important; ';
+
+		$target = $target.clone().attr('style', style).appendTo('body');
+		width = $target.width(true);
+		$target.remove();
+
+		return width;
+	}
 
 	function debug( debug, message )
 	{
