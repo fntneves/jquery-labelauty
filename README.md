@@ -103,7 +103,7 @@ Set a new `class` value that will be applied to changed inputs.
 $(":checkbox").labelauty({ class: "myclass" });
 ~~~
 
-When `label` is setted to `false`, only the input icon appears and changes.
+When `label` is set to `false`, only the input icon appears and changes.
 
 ~~~ js
 $(":checkbox").labelauty({ label: false });
@@ -114,6 +114,15 @@ Choose your separator with `separator`.
 
 ~~~ js
 $(":checkbox").labelauty({ separator: "-" });
+~~~
+
+Do you want to generate random ID's for all inputs?
+Change `force_random_id` to `true`.
+
+~~~ js
+$(":checkbox").labelauty({
+	force_random_id: true,
+});
 ~~~
 
 Do you want custom default labels?
@@ -161,7 +170,7 @@ Acknowledgements
 
 [Contributors][c] can help to make this plugin better.
 
-You can follow [Trello of this repo](https://trello.com/b/bXfzw5mz/jquery-labelauty). 
+You can follow [Trello of this repo](https://trello.com/b/bXfzw5mz/jquery-labelauty).
 
  * [My website](http://francisconeves.com) (francisconeves.com)
  * [Github](http://github.com/fntneves) (@fntneves)
@@ -173,4 +182,3 @@ You can follow [Trello of this repo](https://trello.com/b/bXfzw5mz/jquery-labela
 [jquery-labelauty.css]: https://github.com/fntneves/labelauty-jquery/blob/master/source/jquery-labelauty.css
 [images]: https://github.com/fntneves/labelauty-jquery/tree/master/source/images
 [Options]: https://github.com/fntneves/labelauty-jquery#options
-
