@@ -41,6 +41,10 @@
 			// This message will be visible when input is unchecked
 			unchecked_label: "Unchecked",
 
+			// Force random ID's
+			// Replace original ID's with random ID's,
+			force_random_id: false,
+
 			// Minimum Label Width
 			// This value will be used to apply a minimum width to the text labels
 			minimum_width: false,
@@ -128,7 +132,7 @@
 			// If there's no ID Attribute, then generate a new one
 			input_id = $object.attr( "id" );
 
-			if( input_id == null )
+			if( settings.force_random_id || input_id == null || input_id.trim() === "")
 			{
 				var input_id_number = 1 + Math.floor( Math.random() * 1024000 );
 				input_id = "labelauty-" + input_id_number;
