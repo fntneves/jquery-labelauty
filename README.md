@@ -177,8 +177,8 @@ You can follow [Trello of this repo](https://trello.com/b/bXfzw5mz/jquery-labela
  * [Twitter](http://twitter.com/fntneves) (@fntneves)
 
 [francisconeves]: http://www.francisconeves.com
-[c]:   http://github.com/fntneves/labelauty-jquery/contributors
-[jquery-labelauty.js]: https://github.com/fntneves/labelauty-jquery/blob/master/source/jquery-labelauty.js
-[jquery-labelauty.css]: https://github.com/fntneves/labelauty-jquery/blob/master/source/jquery-labelauty.css
-[images]: https://github.com/fntneves/labelauty-jquery/tree/master/source/images
-[Options]: https://github.com/fntneves/labelauty-jquery#options
+[c]:   http://github.com/fntneves/jquery-labelauty/contributors
+[jquery-labelauty.js]: https://github.com/fntneves/jquery-labelauty/blob/master/source/jquery-labelauty.js
+[jquery-labelauty.css]: https://github.com/fntneves/jquery-labelauty/blob/master/source/jquery-labelauty.css
+[images]: https://github.com/fntneves/jquery-labelauty/tree/master/source/images
+[Options]: https://github.com/fntneves/jquery-labelauty#options
