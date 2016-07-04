@@ -61,11 +61,19 @@
 		return this.each(function()
 		{
 			var $object = $( this );
+			var selected = $object.is(':checked');
+			var type = $object.attr('type');
 			var use_labels = true;
 			var labels;
 			var labels_object;
 			var input_id;
-
+			
+			//Get the aria label from the input element
+			var aria_label = $object.attr( "aria-label" );
+			
+			// Hide the object form screen readers
+			$object.attr( "aria-hidden", true );
+			
 			// Test if object is a check input
 			// Don't mess me up, come on
 			if( $object.is( ":checkbox" ) === false && $object.is( ":radio" ) === false )
@@ -74,11 +82,11 @@
 			// Add "labelauty" class to all checkboxes
 			// So you can apply some custom styles
 			$object.addClass( settings.class );
-
+			
 			// Get the value of "data-labelauty" attribute
 			// Then, we have the labels for each case (or not, as we will see)
 			labels = $object.attr( "data-labelauty" );
-
+			
 			use_labels = settings.label;
 
 			// It's time to check if it's going to the right way
@@ -123,11 +131,11 @@
 			// Start hiding ugly checkboxes
 			// Obviously, we don't need native checkboxes :O
 			$object.css({ display : "none" });
-
+						
 			// We don't need more data-labelauty attributes!
 			// Ok, ok, it's just for beauty improvement
 			$object.removeAttr( "data-labelauty" );
-
+			
 			// Now, grab checkbox ID Attribute for "label" tag use
 			// If there's no ID Attribute, then generate a new one
 			input_id = $object.attr( "id" );
@@ -151,8 +159,32 @@
 
 			// Now, add necessary tags to make this work
 			// Here, we're going to test some control variables and act properly
-			$object.after( create( input_id, labels_object, use_labels ) );
-
+			
+			var element = jQuery(create( input_id, aria_label, selected, type, labels_object, use_labels ))
+			
+			element.click(function(){
+				if($object.is(':checked')){
+					$(element).attr('aria-checked', false);
+				}else{
+					$(element).attr('aria-checked', true);
+				}
+			});
+			
+			element.keypress(function(event){
+				event.preventDefault();
+				if(event.keyCode === 32 || event.keyCode === 13){		
+					if($object.is(':checked')){
+						$object.prop('checked', false);
+						$(element).attr('aria-checked',false);
+					}else{
+						$object.prop('checked', true);
+						$(element).attr('aria-checked', true);
+					}
+				}
+			})
+			
+			$object.after(element);
+			
 			// Now, add "min-width" to label
 			// Let's say the truth, a fixed width is more beautiful than a variable width
 			if( settings.minimum_width !== false )
@@ -198,12 +230,13 @@
 			window.console.log( "jQuery-LABELAUTY: " + message );
 	};
 
-	function create( input_id, messages_object, label )
-	{
+	function create( input_id, aria_label, selected, type, messages_object, label )
+	{	
 		var block;
 		var unchecked_message;
 		var checked_message;
-
+		var aria = "";
+		
 		if( messages_object == null )
 			unchecked_message = checked_message = "";
 		else
@@ -216,10 +249,15 @@
 			else
 				checked_message = messages_object[1];
 		}
-
+		
+		if(aria_label == null)
+			aria = "";	
+		else
+			aria = 'tabindex="0" role="' + type + '" aria-checked="' + selected + '" aria-label="' + aria_label + '"';
+		
 		if( label == true )
 		{
-			block = '<label for="' + input_id + '">' +
+			block = '<label for="' + input_id + '" ' + aria + '>' +
 						'<span class="labelauty-unchecked-image"></span>' +
 						'<span class="labelauty-unchecked">' + unchecked_message + '</span>' +
 						'<span class="labelauty-checked-image"></span>' +
@@ -228,12 +266,12 @@
 		}
 		else
 		{
-			block = '<label for="' + input_id + '">' +
+			block = '<label for="' + input_id + '" ' + aria + '>' +
 						'<span class="labelauty-unchecked-image"></span>' +
 						'<span class="labelauty-checked-image"></span>' +
 					'</label>';
 		}
-
+		
 		return block;
 	};
 

@@ -33,6 +33,13 @@ $(document).ready(function(){
 
 Simple, isn't it?
 
+Aria Uses
+----------
+To add a Aria attributes, just add a aria-label. Labelauty will add tabindex, role and checked attributes.
+
+~~~ html
+<input aria-label="This branch is awesome" type="checkbox"/>
+~~~
 
 Use Cases
 ----------
