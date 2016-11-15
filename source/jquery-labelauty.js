@@ -25,6 +25,10 @@
 			// This class will be used to apply styles
 			class: "labelauty",
 
+			// Use icon?
+			// If false, then only a text label represents the input
+			icon: true,
+
 			// Use text label ?
 			// If false, then only an icon represents the input
 			label: true,
@@ -63,6 +67,7 @@
 			var $object = $( this );
 			var selected = $object.is(':checked');
 			var type = $object.attr('type');
+			var use_icons = true;
 			var use_labels = true;
 			var labels;
 			var labels_object;
@@ -88,6 +93,7 @@
 			labels = $object.attr( "data-labelauty" );
 			
 			use_labels = settings.label;
+			use_icons = settings.icon;
 
 			// It's time to check if it's going to the right way
 			// Null values, more labels than expected or no labels will be handled here
@@ -96,9 +102,7 @@
 				if( labels == null || labels.length === 0 )
 				{
 					// If attribute has no label and we want to use, then use the default labels
-					labels_object = new Array();
-					labels_object[0] = settings.unchecked_label;
-					labels_object[1] = settings.checked_label;
+					labels_object = [settings.unchecked_label, settings.checked_label]
 				}
 				else
 				{
@@ -160,7 +164,7 @@
 			// Now, add necessary tags to make this work
 			// Here, we're going to test some control variables and act properly
 			
-			var element = jQuery(create( input_id, aria_label, selected, type, labels_object, use_labels ))
+			var element = jQuery(create( input_id, aria_label, selected, type, labels_object, use_labels, use_icons ));
 			
 			element.click(function(){
 				if($object.is(':checked')){
@@ -181,7 +185,7 @@
 						$(element).attr('aria-checked', true);
 					}
 				}
-			})
+			});
 			
 			$object.after(element);
 			
@@ -228,9 +232,9 @@
 	{
 		if( debug && window.console && window.console.log )
 			window.console.log( "jQuery-LABELAUTY: " + message );
-	};
+	}
 
-	function create( input_id, aria_label, selected, type, messages_object, label )
+	function create( input_id, aria_label, selected, type, messages_object, label, icon )
 	{	
 		var block;
 		var unchecked_message;
@@ -255,7 +259,7 @@
 		else
 			aria = 'tabindex="0" role="' + type + '" aria-checked="' + selected + '" aria-label="' + aria_label + '"';
 		
-		if( label == true )
+		if( label == true && icon == true)
 		{
 			block = '<label for="' + input_id + '" ' + aria + '>' +
 						'<span class="labelauty-unchecked-image"></span>' +
@@ -263,6 +267,13 @@
 						'<span class="labelauty-checked-image"></span>' +
 						'<span class="labelauty-checked">' + checked_message + '</span>' +
 					'</label>';
+		}
+		else if( label == true )
+		{
+			block = '<label for="' + input_id + '" ' + aria + '>' +
+				'<span class="labelauty-unchecked">' + unchecked_message + '</span>' +
+				'<span class="labelauty-checked">' + checked_message + '</span>' +
+				'</label>';
 		}
 		else
 		{
@@ -273,6 +284,6 @@
 		}
 		
 		return block;
-	};
+	}
 
 }( jQuery ));

@@ -10,7 +10,7 @@ __Note:__ Labelauty does not support Internet Explorer 7 and 8.
 
 Installation
 ------------
-~~~~
+~~~
 bower install labelauty
 ~~~
 
@@ -114,6 +114,12 @@ When `label` is set to `false`, only the input icon appears and changes.
 
 ~~~ js
 $(":checkbox").labelauty({ label: false });
+~~~
+
+When `icon` is set to `false`, only the input text label appears and changes.
+
+~~~ js
+$(":checkbox").labelauty({ icon: false });
 ~~~
 
 Change separator between custom labels, in __data-labelauty__ attribute.
