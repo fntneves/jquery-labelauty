@@ -219,9 +219,9 @@
 	{
 		var width = 0;
 		var $target = element;
-		var style = 'position: absolute !important; top: -1000 !important; ';
+		var css_class = 'hidden_element';
 
-		$target = $target.clone().attr('style', style).appendTo('body');
+		$target = $target.clone().attr('class', css_class).appendTo('body');
 		width = $target.width(true);
 		$target.remove();
 

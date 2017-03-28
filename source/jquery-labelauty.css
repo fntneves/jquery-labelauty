@@ -7,6 +7,11 @@
  * @license: MIT License
  */
 
+.hidden_element {
+    position: absolute !important;
+    top: -1000 !important;
+}
+
 /* Prevent text and blocks selection */
 input.labelauty + label ::selection { background-color: rgba(255, 255, 255, 0); }
 input.labelauty + label ::-moz-selection { background-color: rgba(255, 255, 255, 0); }
