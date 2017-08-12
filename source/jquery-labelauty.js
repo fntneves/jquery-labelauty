@@ -19,43 +19,43 @@
 		{
 			// Development Mode
 			// This will activate console debug messages
-			development: false,
+			"development": false,
 
 			// Trigger Class
 			// This class will be used to apply styles
-			class: "labelauty",
+			"class": "labelauty",
 
 			// Use icon?
 			// If false, then only a text label represents the input
-			icon: true,
+			"icon": true,
 
 			// Use text label ?
 			// If false, then only an icon represents the input
-			label: true,
+			"label": true,
 
 			// Separator between labels' messages
 			// If you use this separator for anything, choose a new one
-			separator: "|",
+			"separator": "|",
 
 			// Default Checked Message
 			// This message will be visible when input is checked
-			checked_label: "Checked",
+			"checked_label": "Checked",
 
 			// Default UnChecked Message
 			// This message will be visible when input is unchecked
-			unchecked_label: "Unchecked",
+			"unchecked_label": "Unchecked",
 
 			// Force random ID's
 			// Replace original ID's with random ID's,
-			force_random_id: false,
+			"force_random_id": false,
 
 			// Minimum Label Width
 			// This value will be used to apply a minimum width to the text labels
-			minimum_width: false,
+			"minimum_width": false,
 
 			// Use the greatest width between two text labels ?
 			// If this has a true value, then label width will be the greatest between labels
-			same_width: true
+			"same_width": true
 		}, options);
 
 		/*
@@ -86,7 +86,7 @@
 
 			// Add "labelauty" class to all checkboxes
 			// So you can apply some custom styles
-			$object.addClass( settings.class );
+			$object.addClass( settings["class"] );
 			
 			// Get the value of "data-labelauty" attribute
 			// Then, we have the labels for each case (or not, as we will see)
